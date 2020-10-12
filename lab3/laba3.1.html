@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html id="htmlTag">
+<head>
+	<title>Животные</title>
+	<script type="text/javascript">
+		function foo() {
+			var note = document.getElementById("yy");
+			tree(document.head.children);
+			note.innerHTML = str;
+			 str += "\n< /head> \n\n< body>\n\n";
+			tree(document.body.children);
+  str += "\n";
+  str +=String("< /body> ");
+  note.innerHTML = str;
+  console.log(str)
+		}
+str =String("< head> \n");
+str += "\n";
+help=0;
+		function tree(els){
+           for (var i=0; i< els.length; i++){
+	console.log("<" + els[i].localName + ">")
+	for (var j=0; j<help; j++){
+		str+="   "
+	}
+	str+=String("   < "+els[i].localName+">");
+	str+="  ";
+           	help=help+1;
+           if (els[i].children.length != 0) {
+           	str += "\n";
+			tree(els[i].children)
+			
+		} 
+			help=help-1;
+			for (var j=0; j<help; j++){
+		str+="   "
+	}
+		str+=String("   < /"+els[i].localName+">");
+		str += "\n";
+
+			}
+}
+</script>
+</head>
+<body id="uu">
+<h1>Наши животные</h1>
+<ul>
+	<li >Породы кошек</li>
+	<ol>
+		<li>сиамские</li>
+		<li>бенгальские</li>
+		<li>сфинксы</li>
+		<li>мейнкун</li>
+	</ol>	
+		<li>Породы собак</li>
+	<ol>
+		<li>овчарка</li>
+		<li>такса</li>
+		<li>пудель</li>
+		<li>корги</li>
+		<li>мопсы</li>
+	</ol>	
+</ul>	
+<div>
+<p onclick="foo();">Спасибо<span id="r"> за внимание!</span></p>
+</div>
+<pre><div id="yy"></div></pre>
+</body>
+</html>

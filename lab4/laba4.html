@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>КитиШоп</title>
+	<style type="text/css">
+		header {
+	float:left;
+	width: 99.4%;
+	color: white;
+	padding: 0.3%;
+	background-color: #ffdab9;
+	border-bottom: 5px solid #deb887;
+	
+              }
+
+header>div#logo>a>img{
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+header>div#logo>a {
+	color:white;
+}
+
+header>div#logo>a>span {
+	font-size: 2.5em;
+	margin-left: 10px;
+	font-family: 'Caveat', cursive; 
+	text-align: center;
+}
+#rights {
+	float: left;
+	margin-left: 5%;
+	font-size: 1em;
+	margin-top: 20px;
+}
+#footer_menu {
+font-size: 1.5em;
+
+}
+
+#footer_menu>a {
+	margin-left: 2%;
+	color: #deb887;
+}
+
+#footer_menu>a:hover {
+	border-bottom: 1px solid silver;
+	color: #c34f25;
+}
+
+footer {
+	float:left;
+	width: 98%;
+	color: white;
+	padding: 1%;
+	background-color: #ffdab9;
+	border-top: 5px solid #deb887;
+	margin-top: 10px;
+}
+#site_name {
+	margin-right: 5%;
+	font-size: 2em;
+	float: right;
+	font-family: 'Caveat', cursive; 
+}
+#rights>a {
+color: #deb887;
+}
+#rights>a:hover {
+	border-bottom: 1px solid silver;
+	color: #c34f25;
+}
+ table, tr, th, td {
+         border: 1px solid  #deb887;
+
+                           }
+
+th {
+ 	background-color: #deb887;
+ 	color: white;
+ }
+ td {
+ 	padding-left: 13px;
+ }
+ table {
+ float: left;
+ margin-top: 5px;
+ margin-bottom: 5px;
+ }
+ #basket {
+ 	width: 35%;
+ 	margin-left: 15%;
+ }
+ #choose {
+ 	width: 45%;
+ }
+ 
+  tr:hover {
+  	background-color: #c34f25;
+  }
+  #for {
+  	float: left;
+  	border: 2px solid  #deb887;
+  	padding: 5px;
+  	margin-top: 20px;
+  	margin-left: 50px;
+  }
+ #sub {
+ 	margin-left: 150px;
+ 	margin-top: 10px;
+ }
+ .submit {
+ 	
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: .5em 2em;
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  border-color: #deb887;
+  border-radius: 6px;
+  background: #deb887;
+  transition: 0.2s;
+ }
+ .submit:hover {
+ 	 color: #c34f25;
+ 	 padding: .5em 3em;
+ }
+ #counter {
+ 	float: left;
+ 	margin-left: 25%;
+ 	margin-top: 4%;
+ }
+ #counter>button {
+ 	margin-left: 60%;
+ 	margin-top: 10px;
+ }
+ .stoit {
+	font-size: 1.7em;
+	font-family: 'Caveat', cursive; 
+	color: #deb887;
+ }
+ #number {
+ 	font-size: 2em;
+	font-family: 'Caveat', cursive; 
+	color: #c34f25;
+ }
+ #choose img, #basket img {
+ 	width: 100px;
+ 	height: 100px;
+ 	padding: 3px;
+ }
+	</style>
+<script type="text/javascript">
+
+	function addRow(){
+var money = document.getElementById("cena").value;	
+var paroda = document.getElementById("name").value;
+if (paroda != "" && money !="" && !(isNaN(money))){
+var table = document.getElementById("choose");
+var row = document.createElement("tr");
+table.appendChild(row);
+var cell1 = document.createElement("td");
+var cell2 = document.createElement("td");
+var cell3 = document.createElement("td");
+cell1.innerHTML = "<img src='https://makusha.ru/20130101/00415/00415_Kak-risovat-koshku-Pushin--Pussheen-the-Cat--po-pr.png'>" 
+cell2.innerHTML = paroda;
+cell2.setAttribute('onclick', 'add(this);');
+cell3.innerHTML = money;
+row.appendChild(cell1);
+row.appendChild(cell2);
+row.appendChild(cell3); 
+
+                 }
+          }
+
+    function allCena(){
+        var summ = 0;
+        var table = document.getElementById("basket");
+        var trs = table.querySelectorAll('tr');
+        for (var i = 1; i<trs.length;i++){
+            var tds = trs[i].querySelectorAll('td');
+            summ += Number(tds[2].innerHTML)*Number(tds[3].innerHTML) ;
+        }
+        var price = document.getElementById("number");
+        price.innerHTML = summ;
+    }
+
+   function allRemove() {
+   	var table = document.getElementById("basket");
+    var trs = table.querySelectorAll('tr');
+        for (var i = 1; i<trs.length;i++){
+            trs[i].remove();
+        }
+        var price = document.getElementById("number");
+        price.innerHTML = "00";
+   }
+
+   function removeStr(el){
+   	 el.parentNode.remove();
+
+   }
+
+   function add(el) {
+   	var key = true;
+   	var tds = el.parentNode.querySelectorAll('td');
+    var table2 = document.getElementById("basket");
+    var trs2 = table2.querySelectorAll('tr');
+      for (var i = 1; i<trs2.length;i++){
+      	 var tds2 = trs2[i].querySelectorAll('td');
+      	 if (tds[1].textContent == tds2[1].textContent){
+      	 	var b = Number(tds2[3].textContent) +1;
+      	 	tds2[3].textContent = b;
+      	 	key = false;
+      	 }
+      }
+ 
+if (key == true) {
+   var tds = el.parentNode.querySelectorAll('td');
+   var table = document.getElementById("basket");
+   var row = document.createElement("tr");
+   table.appendChild(row);
+   var cell1 = document.createElement("td");
+   var cell2 = document.createElement("td");
+   var cell3 = document.createElement("td");
+   var cell4 = document.createElement("td");
+   cell1.innerHTML = tds[0].innerHTML;
+   cell2.innerHTML = tds[1].innerHTML;
+   cell2.setAttribute('onclick', 'removeStr(this);');
+   cell3.innerHTML = tds[2].innerHTML;
+    cell4.innerHTML = "1";
+   row.appendChild(cell1);
+   row.appendChild(cell2);
+   row.appendChild(cell3); 
+   row.appendChild(cell4)
+}
+  }
+</script>
+</head>
+<body>
+	<header>
+    	<div id="logo">
+    		<a href="" title="На главную, друг">
+    			<img src="https://avatars.mds.yandex.net/get-pdb/2985916/b59d127d-3166-4eae-b383-0103a98b6945/s1200" alt="supperShttps://avatars.mds.yandex.net/get-pdb/2985916/b59d127d-3166-4eae-b383-0103a98b6945/s1200ite.com">
+    			<span>Магазин котиков</span>
+    		</a>
+    	</div>
+    </header>
+<table id="choose">
+	
+	<tr>
+		<th>Фото</th>
+		<th>Порода</th>
+		<th>Цена (р.)</th>
+	</tr>
+	<tr><td><img src="https://sun9-40.userapi.com/c856036/v856036741/1cfa56/lYB3aw0CP-g.jpg"></td>
+		<td onclick="add(this);">Бенгальская</td>
+		<td>100000</td>
+	</tr>
+	<tr><td><img src="https://avatars.mds.yandex.net/get-zen_doc/59126/pub_5d6ca31c3d008800b6bd5d7a_5d736c7d35ca3100b9c10f3a/scale_1200"></td>
+		<td onclick="add(this);">Сиамская</td>
+		<td>1234</td>
+	</tr>
+	<tr><td><img src="https://sun9-28.userapi.com/BOF2g9whvACG--zAnJf5tt4cyo757AF3qkboag/gRTJC_3DRDo.jpg"></td>
+		<td onclick="add(this);">Дима</td>
+		<td>4112001</td>
+	</tr>
+	<tr><td><img src="https://kot-pes.com/wp-content/uploads/2015/04/Koshki-porodi-manchkin-06.jpg"></td>
+		<td onclick="add(this);">Манчкин</td>
+		<td>1111</td>
+	</tr>
+</table>
+
+<table id="basket">
+	<tr>
+		<th colspan="4">Корзина</th>
+	</tr>
+	
+</table>
+<div id="for">
+<form>
+<div>
+	<label for="name">Введите породу:   </label>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="text" id="name" name="paroda" placeholder="Сиамский"  maxlength="20">
+</div>
+<br>
+<div>
+	<label for="cena">Введите стоимость:   </label>
+	&nbsp;&nbsp;
+	<input type="text" id="cena" placeholder="Бесценно"  name="money"  maxlength="5">
+</div>
+<div id="sub">
+	<input type="button" onclick=" addRow();" class="submit" value="Добавить" ">
+</div>
+</form>
+</div>
+<div id="counter">
+	<span class="stoit">Стоимость вашего заказа:</span> &nbsp;&nbsp;<span id="number">00</span>&nbsp;<span class="stoit">р.</span>
+	<br>
+	<button   onclick=" allCena();" class="submit">Рассчитать</button>
+	<br>
+	<button  onclick="allRemove();" class="submit">Опустошить</button>
+</div>
+ <footer>
+	<div id="site_name">
+		<span>Не грусти!</span> Просто купи себе котика!=)
+	</div>
+	<div id="footer_menu">
+		<a class="foot" href="" title="Узнать нас поближе">Познакомиться</a>
+		<a class="foot" href="" title="Заглянуть в нашу жизнь">Галлерея</a>
+		<a class="foot" href="" title="Написать письмо">Обратная связь</a>
+	</div>
+	<div id="rights">
+		<a href="">Все права защищены &copy; <?=date ('Y')?> </a>
+	</div>
+    </footer>
+
+</body>
+</html>

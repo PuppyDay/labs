@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <meta name="viewport"
+ content="width=device-width, initial-scale=1.0">
+ <title>ICS6 Bootstrap</title>
+ <link
+ href="http://e-learning.bmstu.ru/moodle/pluginfile.php/754
+6/mod_folder/content/0/bootstrap.min.css" rel="stylesheet">
+ <style>
+ html {
+ position: relative;
+ min-height: 100%;
+ }
+ body {
+ margin-bottom: 40px;
+ }
+ main {
+ margin-top: 15px;
+ }
+ footer {
+ height: 40px;
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+ }
+ .my-primary {
+ background-color: #ffc0cb;
+ color: white;
+ }
+ form {
+ 	border: 3px solid #ffc0cb;
+ 	padding: 3px;
+ }
+  table.tab, td.tab, th.tab, tr.tab {
+         border: 3px solid #ffc0cb;
+         padding: 3px;
+                           }
+    .col-8 {
+    	    word-spacing: 5px;
+			font-family: Comic Sans MS;
+			background-color: #ffc0cb;
+			height: 100px;
+    }
+    #but{
+    	background-color: #ffc0cb;
+    }
+ </style>
+</head>
+<body>
+ <header>
+ <nav class="navbar navbar-expand-lg navbar-dark my-primary">
+ <a class="navbar-brand" href="#">Navbar</a>
+ <ul class="navbar-nav mr-auto">
+ <li class="nav-item active">
+ <a class="nav-link" href="#">Home
+ <span class="sr-only">(current)</span>
+ </a>
+ </li>
+ <li class="nav-item">
+ <a class="nav-link" href="#">Link</a>
+ </li>
+ </ul>
+ </nav>
+ </header>
+ <main class="container">
+ <div class="row">
+ <div class="col-4">
+ <img
+ src=" http://e-learning.bmstu.ru/moodle/pluginfile.php/7546/
+mod_folder/content/0/avatar.jpg"
+ alt="avatar" width="150" height="150">
+ <br> <br>
+ </div>
+ <div class="col-8">
+ <p>Бог сотворил кошку для того, чтобы у человека был тигр, <br/>которого можно погладить.</p>
+ </div>
+ </div>
+
+ <div class="row">
+ <div class="col-4">
+ <form name="user" method="post">
+	<table>
+	<tr>
+		<td><label class="form-check-label" for="name">Введите имя:   </label></td><td><input type="text" id="name" placeholder="Иван" title="Введите полное имя по паспорту" class="form-control" maxlength="15">
+		</td>
+	</tr>
+	<tr>
+		<td><label class="form-check-label" for="lastname">Введите фамилию:   </label></td><td><input type="text" class="form-control" id="lastname" placeholder="Иванов" title="Введите фамилию по паспорту" maxlength="15">
+		</td>
+	</tr>
+	<tr><td>Укажите пол:</td><td><label for="mal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;М&nbsp;&nbsp;</label><input type="radio" name="sex" id="mal"><label for="fem">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ж&nbsp;&nbsp;</label><input type="radio" name="sex" id="fem"></td>
+	</tr>
+	<tr>
+		<td><label class="form-check-label" for="email">Ваш электронный адрес:   </label></td><td><input type="email" class="form-control" name="email" id="email" placeholder="ivanov@mail.ru" title="Укажите вашу электронную почту">
+		</td>
+	</tr>
+	<tr>
+		<td><label class="form-check-label" for="pass">Введите пароль: </label></td><td><input type="password" name="pass" class="form-control" id="pass"></td>
+	</tr>
+	<tr>
+		<td><label class="form-check-label" for="twopass">Повторите пароль: </label></td><td><input type="password" name="twopass" class="form-control" id="twopass"></td>
+	</tr>
+	<tr>
+		<td></td><td><input type="submit" name="reg" id="but" class="btn btn-primary" value="Зарегистрироваться"></td>
+	</tr>
+
+
+
+
+	</table>
+</form>
+ </div>
+ <div class="col-4">
+ <table class="tab">
+ 	<tr class="tab"><th class="tab"  colspan="4">Пароды домашних животных</th></tr>
+ 	<tr class="tab">
+ 		<th class="tab">кошки</th><th class="tab">собаки</th><th class="tab">хомяки</th><th class="tab">кролики</th>
+ 	</tr>
+ 	<tr class="tab">
+ 		<td class="tab">сиамские</td><td class="tab">овчарки</td><td class="tab">пятнистые</td><td class="tab">белые</td>
+ 	</tr>
+ 	<tr class="tab">
+ 		<td class="tab">майские</td><td class="tab">хаски</td><td class="tab">южные</td><td class="tab">серые</td>
+ 	</tr>
+ 	<tr class="tab">
+ 		<td class="tab">чеширские</td><td class="tab">таксы</td><td class="tab">бурые</td><td class="tab">пушистые</td>
+ 	</tr>
+ </table>
+ </div>
+ </div>
+ <div class="row">
+  <div class="col-3"></div>
+ <div class="col"> 	
+ <h2>Общество в широком смысле:</h2>
+<ol>
+<li>Это обособившаяся от природы, но тесно с ней связанная часть материального мира, которая включает в себя: способы взаимодействия людей; формы объединения людей.</li>
+<li>Всё человечество в прошлом, современности и перспективе.</li>
+</ol>
+<h2>Общество в узком смысле:</h2>
+<ol>
+<li>Совокупность людей, объединённых для общения, удовлетворения общих интересов, совместного выполнения какой-либо деятельности (например, спортивное общество, «Друзья леса»).</li>
+<li>Определённый этап исторического развития человечества (например, феодальное общество, капиталистическое общество).</li>
+</ol>
+<p id="such">Сущность общества кроется в отношениях, в которые вступают люди друг с другом в процессе своей жизнедеятельности. Следовательно, общество есть совокупность общественных отношений.</p>
+<p class="relation">Общественные отношения — это многообразные формы взаимодействия людей, а также связи, возникающие между различными социальными группами (или внутри них).</p>
+<p><span class="people">Герберт Спенсер </span>(1820−1903) — английский философ и социолог, один из родоначальников эволюционизма, основатель органической школы в социологии.</p>
+<p class="relation">Большое влияние на формирование его взглядов оказали <span class="people">А. Сен-Симон и О. Конт</span>, с которым ему довелось общаться лично.</p>
+<p class="relation">Эволюция не может завершиться иначе, как осуществлением величайшего совершенства и полнейшего счастья.</p>
+ </div>
+  <div class="col-3"></div>
+ </div>
+ </main>
+ <footer class="my-primary">
+ <div class="container">
+ <p class="footer-text">Footer</p>
+ </div>
+ </footer>
+</body>
+</html>
