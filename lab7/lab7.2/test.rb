@@ -4,7 +4,7 @@ require 'minitest/autorun'
 require 'minitest/assertions'
 require_relative 'func'
 
-# :nodoc:
+# class for test
 class MyTest < Minitest::Test
   ALPHABET = ('a'..'z').to_a
   def setup
@@ -13,11 +13,11 @@ class MyTest < Minitest::Test
   end
 
   def test_first
-    assert((StringAndNumber.superclass).equal?(String))
+    assert_equal(StringAndNumber.superclass, String)
   end
 
   def test_second
-    assert !(String.superclass).equal?(StringAndNumber)
+    refute_equal(String.superclass, StringAndNumber)
   end
 
   def test_third

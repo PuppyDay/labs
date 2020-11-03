@@ -4,7 +4,7 @@ require 'minitest/autorun'
 require 'minitest/assertions'
 require_relative 'func'
 
-# :nodoc:
+# class for test
 class MyTest < Minitest::Test
   def test_first
     result = square(0.1)

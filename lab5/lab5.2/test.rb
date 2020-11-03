@@ -8,43 +8,34 @@ require_relative 'func'
 class MyTest < Minitest::Test
   ALPHABET = ('a'..'z').to_a
   def setup
-    arr1 = []
-    arr2 = []
-    rand(5..10).times do |i|
-      # puts i
+    arr_initial = []
+    arr_rez = []
+    rand(5..10).times do |i_key|
       word = ALPHABET.sample(10).join
-      a = rand(0..2)
-      puts 'a=  ' + a.to_s
-      case a
+      case rand(0..2)
       when 0
-        puts 'i=  ' + i.to_s
-        if i.odd?
-          arr1 << 'н' + word
-          arr2 << 'key'
+        if i_key.odd?
+          arr_initial << 'н' + word
+          arr_rez << 'key'
         else
-          arr1 << word
-          arr2 << word
+          arr_initial << word
+          arr_rez << word
         end
       when 1
-        puts 'ii=  ' + i.to_s
-        if i.even?
-          arr1 << 'л' + word
-          arr2 << nil
+        if i_key.even?
+          arr_initial << 'л' + word
+          arr_rez << nil
         else
-          arr1 << word
-          arr2 << word
+          arr_initial << word
+          arr_rez << word
         end
-
       when 2
-        puts 'iii=  ' + i.to_s
-        arr1 << word
-        arr2 << word
+        arr_initial << word
+        arr_rez << word
       end
     end
-    puts @str = arr1.join(' ')
-    puts 'iiiiiiiiiiiiiiiiiiiiiiiii'
-    puts @rez = arr2.compact.join(' ')
-    puts 'jjjjjjjj'
+    @str = arr_initial.join(' ')
+    @rez = arr_rez.compact.join(' ')
   end
 
   def test_first

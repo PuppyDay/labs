@@ -7,7 +7,6 @@ key = gets.chomp
 puts 'Введите строку или -'
 while (str = gets.chomp) != '-'
   array.push(str)
-  # foo(str, key)
 end
 puts "\n \tИзначальные строки:"
 puts array
