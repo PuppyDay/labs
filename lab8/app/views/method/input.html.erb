@@ -1,0 +1,9 @@
+<h1>Method#input</h1>
+<p>Find me in app/views/method/input.html.erb</p>
+<h2>Введите число, чтобы узнать его квадратный корень</h2>
+<%= form_tag("/method/view", :method => "get") do %>
+  <%= label_tag("Число:") %>
+  <%= text_field_tag(:v1) %> <br/>
+  <br/>
+  <%= submit_tag("Calc result") %>
+<% end %>
