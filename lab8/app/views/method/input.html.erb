@@ -3,7 +3,7 @@
 <h2>Введите число, чтобы узнать его квадратный корень</h2>
 <%= form_tag("/method/view", :method => "get") do %>
   <%= label_tag("Число:") %>
-  <%= text_field_tag(:v1) %> <br/>
+  <%= text_field_tag(:v1, "3") %> <br/>
   <br/>
   <%= submit_tag("Calc result") %>
 <% end %>

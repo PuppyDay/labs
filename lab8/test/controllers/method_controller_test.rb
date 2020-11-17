@@ -14,22 +14,19 @@ class MethodControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'test for a regular number' do
-    get method_view_url, params: { v1: 4 }
-    assert_in_delta assigns[:result], Math.sqrt(4), 0.001
-  end
-
-  test 'test for a number with an irrational root' do
-    get method_view_url, params: { v1: 3 }
-    assert_in_delta assigns[:result], Math.sqrt(3), 0.001
+    rand_val = rand(1000.0)
+    get method_view_url, params: { v1: rand_val }
+    assert_in_delta assigns[:result], Math.sqrt(rand_val), 0.01
   end
 
   test 'test for a negative number' do
-    get method_view_url, params: { v1: -3 }
-    assert_equal assigns[:result], 'Введите положительное число'
+    rand_val = -1 * rand
+    get method_view_url, params: { v1: rand_val }
+    assert_nil assigns[:result]
   end
 
   test 'test for a string' do
     get method_view_url, params: { v1: 'hhh' }
-    assert_equal assigns[:result], 'Введите положительное число'
+    assert_nil assigns[:result]
   end
 end
