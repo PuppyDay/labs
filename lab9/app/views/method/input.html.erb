@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Lab9</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   <meta name="csrf-param" content="authenticity_token" />
   <meta name="csrf-token" content="UFakuBbbxCo238Rc5Q+nTIL9wlOAqikMhfzlW+cAXRVi/vk5SG5kqtqSptA0YWtWZq1mvPA43K9aPOe6k9KhZw==" />
   <link rel="stylesheet" media="all" href="/assets/application.debug-63e527d45ca719171df88a110ce0b6ff11c3afd2c33528961cf4c7b1150387fd.css" data-turbolinks-track="reload" />
@@ -33,8 +35,10 @@
       function show_result(data) {
           var result = document.getElementById("result");
           var steps = document.getElementById("steps");
-          if (data.value_result == null)
+          if (data.value_result == null){
+              steps.innerHTML="";
               result.innerHTML = "<hr/>Введите корректные данные";
+          }
           else {
               result.innerHTML = "<hr/>Результат: " + data.value_result;
               steps.innerHTML = "<br/>Шаги:<br/>";
@@ -56,4 +60,3 @@
 </form>
 <div id="result"></div>
 <div id="steps"></div>
-
