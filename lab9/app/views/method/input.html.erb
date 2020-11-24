@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab9</title>
+  <meta name="csrf-param" content="authenticity_token" />
+  <meta name="csrf-token" content="UFakuBbbxCo238Rc5Q+nTIL9wlOAqikMhfzlW+cAXRVi/vk5SG5kqtqSptA0YWtWZq1mvPA43K9aPOe6k9KhZw==" />
+  <link rel="stylesheet" media="all" href="/assets/application.debug-63e527d45ca719171df88a110ce0b6ff11c3afd2c33528961cf4c7b1150387fd.css" data-turbolinks-track="reload" />
+  <script src="/packs/js/application-9afcbb5693aa87623e69.js" data-turbolinks-track="reload"></script>
+  <script>
+      method_url= location.protocol + "//" + location.host +
+          "/method/view.json"
+      function send_query(){
+          var frm = document.forms.my_form;
+          var param_str = "?" +
+              "v1=" + frm.v1.value;
+          if (param_str == "") return false;
+          var my_JSON_object = {};
+          var http_request = new XMLHttpRequest();
+          http_request.open("GET", method_url+param_str, true);
+          http_request.onreadystatechange = function () {
+              var done = 4, ok = 200;
+              if (http_request.readyState == done &&
+                  http_request.status == ok) {
+                  my_JSON_object =
+                      JSON.parse(http_request.responseText);
+                  show_result(my_JSON_object);
+              }
+          };
+          http_request.send(null);
+          return false;
+      }
+
+      function show_result(data) {
+          var result = document.getElementById("result");
+          var steps = document.getElementById("steps");
+          if (data.value_result == null)
+              result.innerHTML = "<hr/>Введите корректные данные";
+          else {
+              result.innerHTML = "<hr/>Результат: " + data.value_result;
+              steps.innerHTML = "<br/>Шаги:<br/>";
+              for (var i = 0; i < data.value_steps.length; ++i) {
+                  steps.innerHTML += "<br/>&nbsp;&nbsp;&nbsp;" + data.value_steps[i] + "<br/>";
+              }
+          }
+      }
+
+  </script>
+</head>
+<body>
+<h2>Введите число, чтобы узнать его квадратный корень</h2>
+<form action="/method/view" accept-charset="UTF-8" method="get" name="my_form" >
+  <label for="_____:">Число:</label>
+  <input type="text" name="v1" id="v1" value="3" /> <br/>
+  <br/>
+  <input type="submit" name="commit" value="Calc result" onclick="return send_query();"  />
+</form>
+<div id="result"></div>
+<div id="steps"></div>
+
