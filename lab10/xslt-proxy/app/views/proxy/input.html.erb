@@ -1,0 +1,27 @@
+<h2>Введите число, чтобы узнать его квадратный корень</h2>
+<%= form_tag("/proxy/output", :method => "get") do %>
+  <%= label_tag("Число:") %>
+  <%= text_field_tag(:v1, "3") %> <br/>
+  <br/>
+  <%= label_tag("Как отобразить страничку:") %>
+  <div>
+    <label>
+      <input type="radio" name="side" value="server" id="server-side" checked/>
+      Рендеринг на стороне сервера
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="radio" name="side" value="client" id="client-side"/>
+      Отдача XML
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="radio" name="side" value="client-with-xslt" id="client-side-xslt"/>
+      Рендеринг на стороне браузера с XSLT
+    </label>
+  </div>
+  <br>
+  <%= submit_tag("Calc result") %>
+<% end %>

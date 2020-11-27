@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="transform.xslt"?>
+<floats type="array">
+  <float type="float">69.0</float>
+  <float type="float">35.492753623188406</float>
+  <float type="float">19.676348228499062</float>
+  <float type="float">13.319511159341321</float>
+  <float type="float">11.80258696293499</float>
+  <float type="float">11.705105833379696</float>
+</floats>
