@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template match="/">
+  <label>Я  генерируюсь на стороне сервера!</label>
+  <br/><br/>
 <xsl:choose>
 <xsl:when test="floats/float[last()] = -1">
 <label>Введите, пожалуйста, корректные данные.</label>

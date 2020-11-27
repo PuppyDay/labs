@@ -6,6 +6,8 @@
         <title>Лабораторная 10</title>
       </head>
       <body>
+        <label>Я  генерируюсь на стороне браузера!</label>
+        <br/><br/>
         <xsl:choose>
           <xsl:when test="floats/float[last()] = -1">
             <label>Введите, пожалуйста, корректные данные.</label>

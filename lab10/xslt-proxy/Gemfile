@@ -5,6 +5,7 @@ ruby '2.7.0'
 
 gem  'bootstrap', '~> 4.0.0.alpha6'
 gem 'jquery-rails'
+gem 'json'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 # Use sqlite3 as the database for Active Record
@@ -49,6 +50,9 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
+  gem 'geckodriver-helper'
+  gem 'rails-controller-testing'
+  gem 'rspec'
   gem 'webdrivers'
 end
 

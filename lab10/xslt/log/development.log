@@ -1284,3 +1284,628 @@ Processing by XmlController#index as XML
 Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 481)
 
 
+Started GET "/users/new" for ::1 at 2020-11-27 23:21:05 +0300
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/?v1=3&format=xml" for 127.0.0.1 at 2020-11-27 23:22:41 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"3"}
+Completed 200 OK in 128ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+Started GET "/?v1=3&format=xml" for 127.0.0.1 at 2020-11-27 23:23:32 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"3"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 484)
+
+
+Started GET "/?v1=3&format=xml" for 127.0.0.1 at 2020-11-27 23:23:36 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"3"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 484)
+
+
+Started GET "/?v1=3&format=xml" for 127.0.0.1 at 2020-11-27 23:23:55 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"3"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 484)
+
+
+Started GET "/?v1=37&format=xml" for 127.0.0.1 at 2020-11-27 23:24:19 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"37"}
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 593)
+
+
+Started GET "/?v1=37&format=xml" for 127.0.0.1 at 2020-11-27 23:24:24 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"37"}
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 591)
+
+
+Started GET "/?v1=37&format=xml" for 127.0.0.1 at 2020-11-27 23:24:27 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"37"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 591)
+
+
+Started GET "/?v1=&format=xml" for 127.0.0.1 at 2020-11-27 23:25:05 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>""}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=&format=xml" for 127.0.0.1 at 2020-11-27 23:25:11 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>""}
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=&format=xml" for 127.0.0.1 at 2020-11-27 23:25:14 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>""}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=%20&format=xml" for 127.0.0.1 at 2020-11-27 23:25:19 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>" "}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=%20&format=xml" for 127.0.0.1 at 2020-11-27 23:25:22 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>" "}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=skjdf&format=xml" for 127.0.0.1 at 2020-11-27 23:26:09 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"skjdf"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=skjdf&format=xml" for 127.0.0.1 at 2020-11-27 23:26:13 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"skjdf"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=skjdf&format=xml" for 127.0.0.1 at 2020-11-27 23:26:16 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"skjdf"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=skjdf&format=xml" for 127.0.0.1 at 2020-11-27 23:26:20 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"skjdf"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=false&format=xml" for 127.0.0.1 at 2020-11-27 23:33:19 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"false"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=false&format=xml" for 127.0.0.1 at 2020-11-27 23:33:29 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"false"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=false&format=xml" for 127.0.0.1 at 2020-11-27 23:33:35 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"false"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=false&format=xml" for 127.0.0.1 at 2020-11-27 23:33:43 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"false"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=false&format=xml" for 127.0.0.1 at 2020-11-27 23:33:47 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"false"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=false&format=xml" for 127.0.0.1 at 2020-11-27 23:34:44 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"false"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=3&format=xml" for 127.0.0.1 at 2020-11-27 23:34:57 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"3"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 481)
+
+
+Started GET "/?v1=3&format=xml" for 127.0.0.1 at 2020-11-27 23:35:03 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"3"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 481)
+
+
+Started GET "/?v1=3&format=xml" for 127.0.0.1 at 2020-11-27 23:35:07 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"3"}
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 481)
+
+
+Started GET "/?v1=rfghj&format=xml" for 127.0.0.1 at 2020-11-27 23:35:18 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"rfghj"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=rfghj&format=xml" for 127.0.0.1 at 2020-11-27 23:35:23 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"rfghj"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=rfghj&format=xml" for 127.0.0.1 at 2020-11-27 23:35:28 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"rfghj"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=&format=xml" for 127.0.0.1 at 2020-11-27 23:35:35 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>""}
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=-8&format=xml" for 127.0.0.1 at 2020-11-27 23:35:40 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"-8"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=-8&format=xml" for 127.0.0.1 at 2020-11-27 23:35:44 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"-8"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=3&format=xml" for 127.0.0.1 at 2020-11-27 23:36:56 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"3"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 481)
+
+
+Started GET "/?v1=false&format=xml" for 127.0.0.1 at 2020-11-27 23:37:23 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"false"}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=false&format=xml" for 127.0.0.1 at 2020-11-27 23:37:26 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"false"}
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=hgf&format=xml" for 127.0.0.1 at 2020-11-27 23:37:31 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"hgf"}
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=3&format=xml" for 127.0.0.1 at 2020-11-27 23:38:57 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"3"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 481)
+
+
+Started GET "/?v1=dksjf&format=xml" for 127.0.0.1 at 2020-11-27 23:39:05 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"dksjf"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=false&format=xml" for 127.0.0.1 at 2020-11-27 23:39:41 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"false"}
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=false&format=xml" for 127.0.0.1 at 2020-11-27 23:39:49 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"false"}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=false&format=xml" for 127.0.0.1 at 2020-11-27 23:39:51 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"false"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=false&format=xml" for 127.0.0.1 at 2020-11-27 23:39:55 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"false"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=lekrfkl&format=xml" for 127.0.0.1 at 2020-11-27 23:40:13 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"lekrfkl"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=lekrfkl&format=xml" for 127.0.0.1 at 2020-11-27 23:40:16 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"lekrfkl"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=&format=xml" for 127.0.0.1 at 2020-11-27 23:40:21 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>""}
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=-765&format=xml" for 127.0.0.1 at 2020-11-27 23:40:25 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"-765"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=-765&format=xml" for 127.0.0.1 at 2020-11-27 23:40:29 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"-765"}
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=4567&format=xml" for 127.0.0.1 at 2020-11-27 23:40:34 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"4567"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 811)
+
+
+Started GET "/?v1=4567&format=xml" for 127.0.0.1 at 2020-11-27 23:40:38 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"4567"}
+Completed 200 OK in 60ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 811)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-27 23:43:17 +0300
+Processing by XmlController#index as HTML
+Completed 406 Not Acceptable in 26ms (ActiveRecord: 0.0ms | Allocations: 517)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/xml_controller.rb:6:in `index'
+Started GET "/?v1=345&format=xml" for 127.0.0.1 at 2020-11-27 23:46:38 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"345"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 706)
+
+
+Started GET "/?v1=345&format=xml" for 127.0.0.1 at 2020-11-27 23:54:25 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"345"}
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 701)
+
+
+Started GET "/?v1=345&format=xml" for 127.0.0.1 at 2020-11-27 23:55:20 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"345"}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 701)
+
+
+Started GET "/?v1=54&format=xml" for 127.0.0.1 at 2020-11-27 23:57:24 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"54"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 591)
+
+
+Started GET "/?v1=54&format=xml" for 127.0.0.1 at 2020-11-27 23:57:35 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"54"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 591)
+
+
+Started GET "/" for ::1 at 2020-11-27 23:58:15 +0300
+Processing by XmlController#index as HTML
+Completed 406 Not Acceptable in 2ms (ActiveRecord: 0.0ms | Allocations: 564)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/xml_controller.rb:6:in `index'
+Started GET "/?v1=3&format=xml" for 127.0.0.1 at 2020-11-27 23:58:45 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"3"}
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 487)
+
+
+Started GET "/?v1=3&format=xml" for 127.0.0.1 at 2020-11-27 23:58:52 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"3"}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 485)
+
+
+Started GET "/?v1=54&format=xml" for 127.0.0.1 at 2020-11-28 00:05:48 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"54"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 591)
+
+
+Started GET "/?v1=54&format=xml" for 127.0.0.1 at 2020-11-28 00:09:04 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"54"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 591)
+
+
+Started GET "/?v1=54&format=xml" for 127.0.0.1 at 2020-11-28 00:09:04 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"54"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 591)
+
+
+Started GET "/?v1=54&format=xml" for 127.0.0.1 at 2020-11-28 00:09:39 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"54"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 591)
+
+
+Started GET "/?v1=54&format=xml" for 127.0.0.1 at 2020-11-28 00:09:39 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"54"}
+Completed 200 OK in 1ms (Views: 0.0ms | ActiveRecord: 0.0ms | Allocations: 591)
+
+
+Started GET "/?v1=345&format=xml" for 127.0.0.1 at 2020-11-28 00:35:53 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"345"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 701)
+
+
+Started GET "/?v1=54&format=xml" for 127.0.0.1 at 2020-11-28 00:36:59 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"54"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 591)
+
+
+Started GET "/?v1=10&format=xml" for 127.0.0.1 at 2020-11-28 00:46:26 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"10"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 536)
+
+
+Started GET "/?v1=10&format=xml" for 127.0.0.1 at 2020-11-28 00:48:44 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"10"}
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 536)
+
+
+Started GET "/?v1=10&format=xml" for 127.0.0.1 at 2020-11-28 00:49:00 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"10"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 536)
+
+
+Started GET "/?v1=10&format=xml" for 127.0.0.1 at 2020-11-28 00:49:34 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"10"}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 536)
+
+
+Started GET "/?v1=54&format=xml" for 127.0.0.1 at 2020-11-28 00:53:45 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"54"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 591)
+
+
+Started GET "/?v1=54&format=xml" for 127.0.0.1 at 2020-11-28 00:53:46 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"54"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 591)
+
+
+Started GET "/?v1=54&format=xml" for 127.0.0.1 at 2020-11-28 01:11:13 +0300
+Started GET "/?v1=54&format=xml" for 127.0.0.1 at 2020-11-28 01:11:13 +0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"54"}
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"54"}
+Completed 200 OK in 104ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1907)
+
+
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 593)
+
+
+Started GET "/?v1=3&format=xml" for 127.0.0.1 at 2020-11-28 01:11:15 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"3"}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 484)
+
+
+Started GET "/?v1=3&format=xml" for 127.0.0.1 at 2020-11-28 01:11:15 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"3"}
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 481)
+
+
+Started GET "/?v1=54&format=xml" for 127.0.0.1 at 2020-11-28 01:11:22 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"54"}
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started GET "/?v1=54&format=xml" for 127.0.0.1 at 2020-11-28 01:11:22 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"54"}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 591)
+
+
+Started GET "/?v1=&format=xml" for 127.0.0.1 at 2020-11-28 01:19:15 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>""}
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=&format=xml" for 127.0.0.1 at 2020-11-28 01:19:48 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>""}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=rrrr&format=xml" for 127.0.0.1 at 2020-11-28 01:20:36 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"rrrr"}
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 373)
+
+
+Started GET "/?v1=eeeee&format=xml" for 127.0.0.1 at 2020-11-28 01:21:07 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"eeeee"}
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 373)
+
+
+Started GET "/?v1=eeeee&format=xml" for 127.0.0.1 at 2020-11-28 01:22:10 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"eeeee"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=eeeee&format=xml" for 127.0.0.1 at 2020-11-28 01:22:31 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"eeeee"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=uuuuu&format=xml" for 127.0.0.1 at 2020-11-28 01:25:20 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"uuuuu"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=uuuuu&format=xml" for 127.0.0.1 at 2020-11-28 01:25:55 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"uuuuu"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=345&format=xml" for 127.0.0.1 at 2020-11-28 01:29:22 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"345"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 701)
+
+
+Started GET "/?v1=54&format=xml" for 127.0.0.1 at 2020-11-28 01:29:56 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"54"}
+Completed 200 OK in 1ms (Views: 0.0ms | ActiveRecord: 0.0ms | Allocations: 591)
+
+
+Started GET "/?v1=yyy&format=xml" for 127.0.0.1 at 2020-11-28 01:30:22 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"yyy"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=10&format=xml" for 127.0.0.1 at 2020-11-28 01:30:58 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"10"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 536)
+
+
+Started GET "/?v1=eeeee&format=xml" for 127.0.0.1 at 2020-11-28 01:31:48 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"eeeee"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=uuuuu&format=xml" for 127.0.0.1 at 2020-11-28 01:32:13 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"uuuuu"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=345&format=xml" for 127.0.0.1 at 2020-11-28 01:33:52 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"345"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 701)
+
+
+Started GET "/?v1=54&format=xml" for 127.0.0.1 at 2020-11-28 01:34:25 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"54"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 591)
+
+
+Started GET "/?v1=yyy&format=xml" for 127.0.0.1 at 2020-11-28 01:34:45 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"yyy"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=10&format=xml" for 127.0.0.1 at 2020-11-28 01:35:17 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"10"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 536)
+
+
+Started GET "/?v1=eeeee&format=xml" for 127.0.0.1 at 2020-11-28 01:35:46 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"eeeee"}
+Completed 200 OK in 1ms (Views: 0.0ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/?v1=uuuuu&format=xml" for 127.0.0.1 at 2020-11-28 01:36:07 +0300
+Processing by XmlController#index as XML
+  Parameters: {"v1"=>"uuuuu"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+

@@ -24,6 +24,7 @@ class ProxyController < ApplicationController
   def parse_params
     @side = params[:side]
     @value = params[:v1]
+    @value = 'false' if @value.to_s =~ /^[а-я]+$/
   end
 
   XSLT_SERVER_TRANSFORM = "#{Rails.root}/public/server_transform.xslt"
