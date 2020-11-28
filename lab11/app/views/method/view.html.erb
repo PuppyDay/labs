@@ -1,0 +1,22 @@
+<p id="result">
+  <% if @result==nil %>
+    <span>Введите положительное число</span>
+  <%else%>
+    <table>
+      <tr><th>Шаги:</th></tr>
+      <% @steps.each do |elem| %>
+        <tr><td>&nbsp;&nbsp;<%= elem %></td></tr>
+      <% end %>
+      <tr></tr>
+      <tr>
+        <th>Результат: </th>
+      </tr>
+      <tr>
+        <td>
+          &nbsp;&nbsp; <%= @result%>
+        </td>
+      </tr>
+    </table><br/>
+  <% end %>
+  </p>
+  <%= link_to "Найти корень другого числа", :method_input %>
