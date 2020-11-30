@@ -3,7 +3,3 @@
 one:
   value: 1.5
   result: MyText
-
-two:
-  value: 1.5
-  result: MyText

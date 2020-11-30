@@ -12,7 +12,7 @@ class MethodController < ApplicationController
       x_current = 0.5 * (x_current + a_argument / x_current)
       res = x_current
       @steps << res
-      break if (x_current**2 - a_argument) / a_argument < 0.001
+      break if (x_current ** 2 - a_argument) / a_argument < 0.001
     end
     res
   end
@@ -30,16 +30,16 @@ class MethodController < ApplicationController
       end
     else
       @result = nil
- end
+    end
 
-respond_to do |format|
+    respond_to do |format|
       format.html
       format.json do
         render json:
                    { type_result: @result.class.to_s, value_result: @result,
-                     type_steps: @steps.class.to_s, value_steps: @steps }
-     
-    end
+                    type_steps: @steps.class.to_s, value_steps: @steps }
+
+      end
     end
 
 
