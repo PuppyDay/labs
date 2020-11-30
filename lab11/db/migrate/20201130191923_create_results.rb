@@ -6,5 +6,6 @@ class CreateResults < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
+    add_index :results, :value, unique: true
   end
 end

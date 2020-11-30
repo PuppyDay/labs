@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_28_123103) do
+ActiveRecord::Schema.define(version: 2020_11_30_191923) do
 
   create_table "results", force: :cascade do |t|
     t.float "value"
     t.text "result"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["value"], name: "index_results_on_value", unique: true
   end
 
 end

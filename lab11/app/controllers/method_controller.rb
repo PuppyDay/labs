@@ -30,12 +30,27 @@ class MethodController < ApplicationController
       end
     else
       @result = nil
+ end
+
+respond_to do |format|
+      format.html
+      format.json do
+        render json:
+                   { type_result: @result.class.to_s, value_result: @result,
+                     type_steps: @steps.class.to_s, value_steps: @steps }
+     
     end
+    end
+
+
   end
 
   def results
-    @steps = Result.all
-    render xml: @steps.map { |el| ActiveSupport::JSON.decode(el.result) }
+    result = Result.all.map { |el| { value: el.value, result: ActiveSupport::JSON.decode(el.result) } }
+
+    respond_to do |format|
+      format.xml { render xml: result.to_xml }
+    end
   end
 
 end
