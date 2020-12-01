@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class XmlController < ApplicationController
   def index
     v1 = params[:v1].to_i
@@ -21,4 +23,4 @@ class XmlController < ApplicationController
     end
     res
   end
-  end
+end

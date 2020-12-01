@@ -1,13 +1,13 @@
+# frozen_string_literal: true
+
 require 'json'
 require 'selenium-webdriver'
 require 'rspec'
 include RSpec::Expectations
-
+HOST = 'http://localhost:3000/'
 describe 'Correct' do
-
   before(:each) do
     @driver = Selenium::WebDriver.for :firefox
-    @base_url = 'http://localhost:3000/'
     @accept_next_alert = true
     @driver.manage.timeouts.implicit_wait = 30
     @verification_errors = []
@@ -19,7 +19,7 @@ describe 'Correct' do
   end
 
   it 'browser_correct' do
-    @driver.get 'http://localhost:3001/'
+    @driver.get HOST
     @driver.find_element(:id, 'v1').click
     @driver.find_element(:id, 'v1').clear
     @driver.find_element(:id, 'v1').send_keys '345'
@@ -37,7 +37,7 @@ describe 'Correct' do
   end
 
   it 'xml_correct' do
-    @driver.get 'http://localhost:3001/'
+    @driver.get HOST
     @driver.find_element(:id, 'v1').click
     @driver.find_element(:id, 'v1').clear
     @driver.find_element(:id, 'v1').send_keys '54'
@@ -51,7 +51,7 @@ describe 'Correct' do
   end
 
   it 'xml_incorrect' do
-    @driver.get 'http://localhost:3001/'
+    @driver.get HOST
     @driver.find_element(:id, 'v1').click
     @driver.find_element(:id, 'v1').clear
     @driver.find_element(:id, 'v1').send_keys 'yyy'
@@ -61,7 +61,7 @@ describe 'Correct' do
   end
 
   it 'server_correct' do
-    @driver.get 'http://localhost:3001/'
+    @driver.get HOST
     @driver.find_element(:id, 'v1').click
     @driver.find_element(:id, 'v1').clear
     @driver.find_element(:id, 'v1').send_keys '10'
@@ -75,7 +75,7 @@ describe 'Correct' do
   end
 
   it 'server_incorrect' do
-    @driver.get 'http://localhost:3001/'
+    @driver.get HOST
     @driver.find_element(:id, 'v1').click
     @driver.find_element(:id, 'v1').clear
     @driver.find_element(:id, 'v1').send_keys 'eeeee'
@@ -86,7 +86,7 @@ describe 'Correct' do
   end
 
   it 'browser_incorrect' do
-    @driver.get 'http://localhost:3001/'
+    @driver.get HOST
     @driver.find_element(:id, 'v1').click
     @driver.find_element(:id, 'v1').clear
     @driver.find_element(:id, 'v1').send_keys 'uuuuu'
@@ -96,9 +96,9 @@ describe 'Correct' do
     expect(@driver.find_element(:xpath, '//label[2]').text).to eq('Введите, пожалуйста, корректные данные.')
   end
 
-  def verify(&blk)
+  def verify
     yield
-  rescue ExpectationNotMetError => ex
-    @verification_errors << ex
+  rescue ExpectationNotMetError => e
+    @verification_errors << e
   end
 end

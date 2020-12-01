@@ -21,8 +21,8 @@ class MethodController < ApplicationController
 
   def view
     v1 = params[:v1].to_i
+    @steps, @result = nil
     @result = (rooting(v1) if v1.to_s =~ /^[-+]?[0-9]*\.?[0-9]+$/ && v1.positive?)
-
     respond_to do |format|
       format.html
       format.json do

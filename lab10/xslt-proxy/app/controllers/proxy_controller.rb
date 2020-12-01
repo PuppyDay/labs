@@ -8,12 +8,11 @@ class ProxyController < ApplicationController
   def input; end
 
   def output
-
     api_response = open("http://localhost:3000/?v1=#{@value}&format=xml")
     if @side == 'server'
       @result = xslt_transform(api_response).to_html
     elsif @side == 'client-with-xslt'
-      render xml: insert_browser_xslt(api_response).to_xml
+      render xml: insert_browser_xslt(api_response)
     else
       render xml: api_response
     end
@@ -28,7 +27,6 @@ class ProxyController < ApplicationController
   end
 
   XSLT_SERVER_TRANSFORM = "#{Rails.root}/public/server_transform.xslt"
-  XSLT_BROWSER_TRANSFORM = '/browser_transform.xslt'
 
   def xslt_transform(data, transform: XSLT_SERVER_TRANSFORM)
     doc = Nokogiri::XML(data)
@@ -36,11 +34,8 @@ class ProxyController < ApplicationController
     xslt.transform(doc)
   end
 
-  def insert_browser_xslt(data, transform: XSLT_BROWSER_TRANSFORM)
-    doc = Nokogiri::XML(data)
-    xslt = Nokogiri::XML::ProcessingInstruction.new(doc, 'xml-stylesheet',
-                                                    'type="text/xsl" href="' + transform + '"')
-    doc.root.add_previous_sibling(xslt)
-    doc
+  def insert_browser_xslt(data)
+    data.string.sub('?>',
+                    '?><?xml-stylesheet type="text/xsl" href="/browser_transform.xslt"?>')
   end
 end
