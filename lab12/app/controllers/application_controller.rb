@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionHelper
 
-  before_action :authenticate, except: [:signup, :signin, :new, :create]
+  before_action :authenticate, except: %i[signup signin new create]
 
   def current_user
     @_current_user ||= session[:current_user_id] &&
@@ -10,9 +12,8 @@ class ApplicationController < ActionController::Base
   end
 
   private
+
   def authenticate
-    unless current_user
-      redirect_to signin_path
-    end
+    redirect_to signin_path unless current_user
   end
 end
